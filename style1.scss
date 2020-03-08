@@ -80,8 +80,28 @@ $greyColorBackground: #f7f7f7;
         color: #fff;
       }
     }
+    .btnInfo{
+      width: 62px;
+      background-color: rgba(199, 191, 191, 0.404);
+      color: #000;
+      border-radius: 50px;
+      border: none;
+      font-size: 12px;
+      padding: 3px 20px;
+      font-family: $secondaryFontFamily;
+      &:hover{
+        background-color: rgb(255, 119, 8);
+        color: #fff;
+      }
+    }
+    
+    
   }
 }
+
+  
+
+
 
 .navMenu{
   margin: 10px 0;
@@ -159,22 +179,30 @@ $greyColorBackground: #f7f7f7;
         color: #fff;
       }
     }
-    .inputComment{
-      width: 100%;
-      height: 60px;
-    }
+  }
+}
 
-    .btnComment{
-      float: right;
-      border-radius: 50px;
-      background-color: rgba(199, 191, 191, 0.404);
-      border: none;
-      padding: 5px;
-      font-size: 15px;
-      &:hover{
-        background-color: #000;
-        color: #fff;
-      }
+.comment-container{
+  margin-bottom: 50px;
+  .inputComment{
+    width: 100%;
+    height: 60px;
+    resize: none;
+    margin-bottom: 20px;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .btnComment{
+    float: right;
+    border-radius: 50px;
+    background-color: rgba(199, 191, 191, 0.404);
+    border: none;
+    padding: 5px 15px;
+    font-size: 15px;
+    &:hover{
+      background-color: #000;
+      color: #fff;
     }
   }
 }
@@ -326,7 +354,7 @@ $greyColorBackground: #f7f7f7;
         border: 1px solid #fff;
       }
       svg{
-        font-size: 52px;
+        font-size: 32px;
         color:rgba(255, 255, 255, 0);
         margin: 10px;
         border: 1px solid rgba(255, 255, 255, 0);
@@ -468,4 +496,58 @@ $greyColorBackground: #f7f7f7;
       }
     }
   }
+}
+
+//////////media//////////////
+@media (max-width:960px){
+  .titlePage h2 {
+    font-size: 20px;
+  }
+  .container-product .item {
+    width: 150px;
+    height: 225px;
+  }
+  .navMenu .shop-menu {
+    font-size: 13px;
+  }
+  .navMenu .shop-menu li {
+    font-weight: normal;
+    font-size: 14px;
+  }
+  .navMenu .inputPrice {
+    font-size: 14px;
+    padding: 10px 10px;
+  }
+  .close {
+    position: fixed;
+    right: 17px;
+  }
+  .item .news .upColor {
+    height: 196px;
+    top: -195px;
+    margin-bottom: -216px;
+  }
+  .item .news .upColor svg {
+    font-size: 46px;
+    padding: 6px 13px;
+  }
+  .item .news .content h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width:375px){
+  .container-product .item {
+    width: 100%;
+    height: 360px;
+  }
+  .contacts .item {
+    margin: 0;
+  }
+  .login {
+    margin: 50px 25px;
+  }
+  .registr {
+    margin: 50px 25px;
+}
 }

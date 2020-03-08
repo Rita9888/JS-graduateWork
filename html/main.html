@@ -3,19 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./fontawesome/css/all.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap&subset=latin-ext" rel="stylesheet">
   <title>MOBILI</title>
 </head>
-<body onload="time()">
+<body>
   <div class="wrapper">
-    <header>
+    <header class="desctope">
       <div class="container">
         <div class="row">
-          <div class="logo col-xl-2 col-lg-2">MOBILI</div>
-          <div class="navbar col-xl-6 col-lg-6">
+          <div class="logo col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2"><a class="hrefLogo" href='./main.html' style="color:#000; text-decoration: none;">MOBILI</a></div>
+          <div class="navbar col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
             <ul class="nav-menu">
               <li><a href="main.html">Home</a></li>
               <li><a href="./catalog.html">Shop</a></li>
@@ -24,26 +24,71 @@
               <li><a href="./FAQ.html">FAQ</a></li>
             </ul>
           </div>
-          <div class="account col-xl-2 col-lg-2">
+  
+          <div class="account col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
             <div class="dropdown">
               <button class="dropbtn">My Account<i class="fas fa-angle-down"></i></button>
               <div class="dropdown-content">
                 <a href="./logIn.html">Log In</a>
-                <a href="registrPage.html">Regisration</a>
+                <a href="./registrPage.html">Regisration</a>
               </div>
             </div>
           </div>
-          <div class="search col-xl-1 col-lg-1">
+          <div id ="search" class="search col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+            <form id='inputSearch'>
+              <input  type="search" placeholder="Search product" >
+            </form>
             <i class="fas fa-search"></i>
           </div>
-          <div class="basket col-xl-1 col-lg-1">
-            <div class="circle">
-              <i class="fas fa-shopping-cart"></i>
-            </div>
+          <div id ="basket" class="basket col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+            <span class="container-counter">0</span>
+            <img src="../image/9240.png">
           </div>
         </div>
       </div>
     </header>
+  
+    <section class="header-mobile">
+      <a class="hrefLogo" href='./main.html' style="text-decoration: none;"><div class="logo">MOBILI</div></a>
+      <div class="container">
+        <div class="row">
+          <div class="navbar col-3">
+            <span id="trigger" class="trigger">
+              <i></i>
+              <i></i>
+              <i></i>
+            </span>
+            <ul id="menu" class="nav-menu">
+              <li><a href="main.html">Home</a></li>
+              <li><a href="./catalog.html">Shop</a></li>
+              <li><a href="./blog.html">Blog</a></li>
+              <li><a href="./AboutUs.html">About us</a></li>
+              <li><a href="./FAQ.html">FAQ</a></li>
+            </ul>
+            Menu
+          </div>
+          <div class="null col-3"></div>
+  
+          <div class="account col-2">
+            <div class="dropdown">
+              <button class="dropbtn"><i class="far fa-user"></i></button>
+              <div class="dropdown-content">
+                <a href="./logIn.html">Log In</a>
+                <a href="./registrPage.html">Regisration</a>
+              </div>
+            </div>
+          </div>
+          <div id ="search" class="search col-2">
+            <i class="fas fa-search"></i>
+              
+          </div>
+          <div id ="basket" class="basket col-2">
+            <span class="container-counter">0</span>
+            <img src="../image/9240.png">
+          </div>
+        </div>
+      </div>
+    </section>
 
     
 
@@ -52,10 +97,10 @@
         <div class="slider__item">
           <div class="content">
             <h2>Soft Chair<br> Collection</h2>
-            <p>There are many variation of passage of Lorem ipsum available, but the<br> majority have suffered alteration</p>
+            <p>There are many variation of passage of Lorem ipsum available,<br> but the majority have suffered alteration</p>
             <a href="#">Explore all</a>
           </div>
-          <div><img src="./image/kreslo.png"></image></div>
+          <div><img src="../image/kreslo.png"></image></div>
         </div>
         <div class="slider__item">
             <div class="content">
@@ -63,7 +108,7 @@
               <p>There are many variation of passage of Lorem ipsum available, but the<br> majority have suffered alteration</p>
               <a href="#">Explore all</a>
             </div>
-            <div><img src="./image/chair2.png"></image></div>
+            <div><img src="../image/chair2.png"></image></div>
         </div>
         <div class="slider__item">
           <div class="content">
@@ -71,7 +116,7 @@
             <p>There are many variation of passage of Lorem ipsum available, but the<br> majority have suffered alteration</p>
             <a href="#">Explore all</a>
           </div>
-          <div><img src="./image/chair.png"></image></div>
+          <div><img src="../image/chair.png"></image></div>
         </div>
       </div>
       <a class="slider__control slider__control_left" href="#" role="button"></a>
@@ -80,15 +125,15 @@
     <section class="container3">
       <div class="container">
         <div class="row">
-          <div class="text col-xl-4 col-lg-4">
+          <div class="text col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <h3>Free Shipping</h3>
             <p>Nullam Lacinia Faucibuseuismod Lorem Donec Maximus Placerat Tempor.</p>
           </div>
-          <div class="text col-xl-4 col-lg-4">
+          <div class="text col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <h3>Customer Support</h3>
             <p>Nullam Lacinia Faucibuseuismod Lorem Donec Maximus Placerat Tempor.</p>
           </div>
-          <div class="text col-xl-4 col-lg-4">
+          <div class="text col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <h3>Payment Security</h3>
             <p>Nullam Lacinia Faucibuseuismod Lorem Donec Maximus Placerat Tempor.</p>
           </div>
@@ -100,36 +145,36 @@
       <h2>Welcome Our Store</h2>
       <div class="container">
         <div class="row">
-          <div class="item col-xl-4 col-lg-4 col-md-4">
+          <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="square1">
               <p><span>Flat 40%</span><br>Best product</p>
-              <img src="./image/barchair.webp">
+              <img src="../image/barchair.webp">
               <span id="timer1"></span>
             </div>
             <div class="square2">
               <p><span>Flat 30%</span><br>Solid Sofa</p>
-              <img src="./image/sofa.png">
+              <img src="../image/sofa.png">
             </div>
           </div>
-          <div class="item col-xl-4 col-lg-4 col-md-4">
+          <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="square3">
-              <img src="./image/pufic.png">
+              <img src="../image/pufic.png">
               <a  href="#">EXPLORE ALL</a>
             </div>
             <div class="square4">
               <p>Table Lamp</p>
-              <img src="image/lampa.png">
+              <img src="../image/lampa.png">
               <a  href="#">EXPLORE ALL</a>
             </div>
           </div>
-          <div class="item col-xl-4 col-lg-4 col-md-4">
+          <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="square5">
               <p><span>Flat 25%</span><br>Top product</p>
-              <img src="image/bad.png">
+              <img src="../image/bad.png">
               <span id="timer2"></span>
             </div>
             <div class="square6">
-              <img src="image/lustra.png">
+              <img src="../image/lustra.png">
               <p>Lamp Decore</p>
             </div>
           </div>
@@ -140,7 +185,7 @@
       <h3>Our advantages</h3>
       <div class="container">
         <div class="row">
-          <div class="item col-xl-4 col-lg-4 col-md-4">
+          <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="advantages">
               <i class="fas fa-globe-americas"></i>
               <h4>EASY TO USE</h4>
@@ -152,7 +197,7 @@
               <p>Coded With WordPress Best Practices In Mind, Modules Will Give You An Amazing Looking Site Easier.</p>
             </div>
           </div>
-          <div class="item col-xl-4 col-lg-4 col-md-4">
+          <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="advantages">
               <i class="fas fa-comments"></i>
               <h4>OUTSTANDING SUPPORT</h4>
@@ -164,7 +209,7 @@
               <p>Create As Many Modules As You Want. Personalize Them And Build With Them Your Pages.</p>
             </div>
           </div>
-          <div class="item col-xl-4 col-lg-4 col-md-4">
+          <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="advantages">
               <i class="far fa-heart"></i>
               <h4>SIMPLY BEAUTIFUL</h4>
@@ -183,38 +228,57 @@
       <div class="container">
           <div class="brand row">
               <div class="item col-xl-2 col-lg-2 col-md-2 col-sm-4 col">
-                  <img src="./image/Brand 1.png">
+                  <img src="../image/Brand 1.png">
               </div>
               <div class="item col-xl-2 col-lg-2 col-md-2 col-sm-4 col">
-                  <img src="./image/Brand 2.png">
+                  <img src="../image/Brand 2.png">
               </div>
               <div class="item col-xl-2 col-lg-2 col-md-2 col-sm-4 col">
-                  <img src="./image/Brand 3.png">
+                  <img src="../image/Brand 3.png">
               </div>
               <!--<div class="w-100"></div>-->
               <div class="item col-xl-2 col-lg-2 col-md-2 col-sm-4 col">
-                  <img src="./image/Brand 4.png">
+                  <img src="../image/Brand 4.png">
               </div>
               <div class="item col-xl-2 col-lg-2 col-md-2 col-sm-4 col">
-                  <img src="./image/Brand 5.png">
+                  <img src="../image/Brand 5.png">
               </div>
               <div class="item col-xl-2 col-lg-2 col-md-2 col-sm-4 col">
-                  <img src="./image/Brand 6.png">
+                  <img src="../image/Brand 6.png">
               </div>
           </div>
       </div>
   </section>
+  <div class="brandSlider">
+      <div class="slider-wrapper">
+        <div class="slider-item">
+          <img src="../image/Brand 1.png">
+          <img src="./image/Brand 2.png">
+        </div>
+        <div class="slider-item">
+          <img src="../image/Brand 3.png">
+          <img src="../image/Brand 4.png">
+        </div>
+        <div class="slider-item">
+          <img src="../image/Brand 5.png">
+          <img src="../image/Brand 6.png">
+        </div>
+      </div>
+      <a class="slider-control slider-control_left" href="#" role="button"></a>
+      <a class="slider-control slider-control_right slider-control_show" href="#" role="button"></a>
+    </div>
+    
   <footer>
     <div class="container">
       <div class="row">
-        <div class="storeInf col-xl-3 col-lg-3">
+        <div class="storeInf col-xl-3 col-lg-3 col-md-3 col-sm-3">
           <h4>Store Information</h4>
           <p>60 29th Street San Francisco, CA 94110 507-Union Trade Center, United States of America</p>
           <br>
           <p>Phone : (+00) 123-456-789</p>
           <p>E-mail : demo@example.com</p>
         </div>
-        <div class="product col-xl-2 col-lg-2">
+        <div class="product col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6">
           <h4>Products</h4>
           <ul>
             <li><a>Delivery</a></li>
@@ -224,8 +288,8 @@
             <li><a>Contact us</a></li>
           </ul>
         </div>
-        <div class="null col-xl-2 col-lg-2"></div>
-        <div class="info col-xl-2 col-lg-2">
+        <div class="null col-xl-2 col-lg-2 col-md-2 col-sm-2"></div>
+        <div class="info col-xl-2 col-lg-2 col-md-2 col-sm-2 col-6">
           <h4>Information</h4>
           <ul>
             <li><a>Delivery</a></li>
@@ -235,10 +299,10 @@
             <li><a>Contact us</a></li>
           </ul>
         </div>
-        <div class="pay col-xl-3 col-lg-3">
+        <div class="pay col-xl-3 col-lg-3 col-md-3 col-sm-3">
           <h4>Payment Methods</h4>
-          <img src="./image/cards.png">
-          <img class="appStore" src="./image/apple-app-store-travel-awards-globestamp-7.png">
+          <img src="../image/cards.png">
+          <img class="appStore" src="../image/apple-app-store-travel-awards-globestamp-7.png">
         </div>
       </div>
 
@@ -246,11 +310,14 @@
   </footer>
   </div>
 
-<script src="./carousel.js"></script>
-<script src="./stockTime.js"></script>
+<script src="../js/carousel.js"></script>
+<script src="../js/brandCarusel.js"></script>
+<script src="../js/stockTime.js"></script>
+<script src="../js/search.js"></script>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-<script src="./fontawesome/js/all.js"></script>
+<script src="../fontawesome/js/all.js"></script>
 </body>
 </html>

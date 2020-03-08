@@ -4,13 +4,14 @@ let btn = document.getElementById('registrBtn');
 btn.addEventListener('click',function (){
   let formElement = document.querySelector('form');
         let formData = toTree(serializeForm(formElement));
-        let person = JSON.stringify(formData);
-        localStorage.setItem('person1',person); 
+        const allUsers = JSON.parse(localStorage.getItem(allUsersKey));
+        allUsers.push(formData);
+        localStorage.setItem(allUsersKey,JSON.stringify(allUsers));
         setTimeout(function(){
           alert('Welcome!');
         }, 1 * 1000); 
         setTimeout(function(){
-          window.location.href = './main.html';
+          window.location.href = '../main.html';
         }, 3 * 1000); 
 });
 

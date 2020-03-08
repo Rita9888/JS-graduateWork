@@ -4,7 +4,7 @@ class CardStore{
     getProduct(){
       let products = [];
       let productsStorage = localStorage.getItem('CardStore');
-      if(productsStorage != null){
+      if(productsStorage !== null){
         products = JSON.parse(productsStorage);
       }
       return products;

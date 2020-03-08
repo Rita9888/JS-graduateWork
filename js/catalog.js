@@ -1,10 +1,10 @@
 class AllProducts{
-  constructor(containerProducts, catalogCounter, catalogProduct){
+  constructor(containerProducts, catalogCounter , catalogProduct){
     this.containerProducts = document.querySelector(containerProducts);
     this.catalogCounter = document.querySelector(catalogCounter);
     this.catalogProduct = catalogProduct;
     this.createProduct();
-  }
+}
 
 /* <div class="item">
     <div class="name">Product1</div>
@@ -28,30 +28,30 @@ class AllProducts{
         activeText = 'Delete';
       }
 
-      let item = this.getProductItem({
+      let item = createOneProduct.getProductItem({
         tagName: 'div',
         className: 'item'
       })
 
-      let name = this.getProductItem({
+      let name = createOneProduct.getProductItem({
         tagName: 'div',
         className: 'name',
         textName: this.catalogProduct[i].name
       })
 
-      let img = this.getProductItem({
+      let img = createOneProduct.getProductItem({
         tagName: 'img',
         className: 'img',
         backgroundImg: `${this.catalogProduct[i].img}`
       })
 
-      let price = this.getProductItem({
+      let price = createOneProduct.getProductItem({
         tagName: 'div',
         className: 'price',
         textName: this.catalogProduct[i].price + '$'
       })
 
-      let btn = this.getProductItem({
+      let btn = createOneProduct.getProductItem({
         tagName: 'button',
         className: 'btn',
         textName: activeText,
@@ -60,6 +60,8 @@ class AllProducts{
       btn.addEventListener('click', function(){
         let id = this.getAttribute('id');
         let result = cardStore.putProduct(id);
+
+        allProducts.catalogCounter.innerHTML = result.products.length;
         if(result.statusProduct){
           this.innerHTML = 'Delete';
         }else{
@@ -67,33 +69,54 @@ class AllProducts{
         }
       })
 
+      let btnInfo = createOneProduct.getProductItem({
+        tagName: 'button',
+        className: 'btnInfo',
+        textName: 'detail',
+        id: this.catalogProduct[i].id
+      });
+       btnInfo.addEventListener('click', function(){
+        let id = this.getAttribute('id');
+        let result = cardStore.putProduct(id);
+      }) 
+
       
       item.appendChild(img);
       item.appendChild(name);
       item.appendChild(price);
       item.appendChild(btn);
+      item.appendChild(btnInfo);
       wrapper.appendChild(item);
     }
 
     this.containerProducts.appendChild(wrapper);
   }
 
-  getProductItem(card){
-    let element = document.createElement(card.tagName);
-    if('className' in card){
-      element.setAttribute('class', card.className)
-    }
-    if('textName' in card){
-      element.innerHTML = card.textName;
-    }
-    if('backgroundImg' in card){
-      element.setAttribute('src',card.backgroundImg);
-    }
-    if('id' in card){
-      element.setAttribute('id', card.id);
-    }
-    return element;
+  
+}
+
+function checkProduct(id){
+  for(let i=0; i<catalogProduct.length; i++){
+    if(catalogProduct[i].id == id){
+      console.log(catalogProduct)
+    }   
   }
 }
 
 let allProducts = new AllProducts('.container-product', '.container-counter', catalogProduct);
+
+
+  btnInfo = document.getElementsByClassName('btnInfo');
+  for(let i=0; i<btnInfo.length; i++){
+    btnInfo[i].addEventListener('click', function(){
+      let id = this.getAttribute('id');
+      const [product] = catalogProduct.filter(p => p.id == id);
+      const postParameters =  {
+        containerImage: '.imageProduct',
+        containerDescription: '.descriptionProduct',
+        catalogProduct: product
+      };
+      sessionStorage.setItem('catalogForInfoPage', JSON.stringify(postParameters));
+      window.location.href = '../html/detailedInfo.html';
+    })
+  }

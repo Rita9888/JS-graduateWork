@@ -3,10 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./fontawesome/css/all.css">
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-  <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./style1.css">
+  <link rel="stylesheet" href="../style1.css">
+  <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap&subset=latin-ext" rel="stylesheet">
   <title>Log in</title>
 </head>
@@ -18,11 +18,11 @@
           <h2>Log in</h2>
           <p>Enter login information</p>
           <span>Enter your Email</span>
-          <input type="email" name="email" placeholder=" Email"><br>
+          <input type="email" name="email" id="email" placeholder=" Email"><br>
           <span>Enter your password</span>
-          <input type="password" maxlength="10" name="password" placeholder=" Password"><br>
+          <input type="password" maxlength="10" id="password" name="password" placeholder=" Password"><br>
 
-          <a class="loginBtn" href="./main.html">Log in</a>
+          <a class="loginBtn" id="loginBtn">Log in</a>
         </div>
       </div>
     </div>
@@ -61,7 +61,7 @@
         </div>
         <div class="pay col-xl-3 col-lg-3">
           <h4>Payment Methods</h4>
-          <img src="./image/cards.png">
+          <img src="../image/cards.png">
           <img class="appStore" src="./image/apple-app-store-travel-awards-globestamp-7.png">
         </div>
       </div>
@@ -69,7 +69,7 @@
     </div>
   </footer>
 
-
-<script src="./login.js"></script>  
+<script src="../js/localStorage.js"></script>
+<script src="../js/login.js"></script>  
 </body>
 </html>

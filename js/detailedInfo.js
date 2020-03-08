@@ -1,5 +1,5 @@
 class DetailedProduct{
-  constructor(containerImage, containerDescription, catalogProduct){
+  constructor({containerImage, containerDescription, catalogProduct}){
     this.containerImage = document.querySelector(containerImage);
     this.containerDescription = document.querySelector(containerDescription);
     this.catalogProduct = catalogProduct;
@@ -17,7 +17,6 @@ class DetailedProduct{
       </div> */
 
       createProduct(){
-    
           let item = this.getProductItem({
             tagName: 'div',
             className: 'item'
@@ -72,18 +71,6 @@ class DetailedProduct{
             tagName: 'br'
           })
 
-          let input = this.getProductItem({
-            tagName: 'textarea',
-            className: 'inputComment',
-            //textName: 'Add your comment'
-            
-          })
-          let btnComment = this.getProductItem({
-            tagName: 'button',
-            className: 'btnComment',
-            textName: 'add comment'
-          });
-
     
           
           imgProduct.appendChild(img);
@@ -91,9 +78,6 @@ class DetailedProduct{
           item.appendChild(price);
           item.appendChild(descr);
           item.appendChild(btn);
-          item.appendChild(br);
-          item.appendChild(input);
-          item.appendChild(btnComment);
         
         this.containerImage.appendChild(imgProduct);
         this.containerDescription.appendChild(item);
@@ -116,7 +100,14 @@ class DetailedProduct{
 
         return element;
       }
-}      
-//alert(catalogProduct[1])
-let detailedProduct = new DetailedProduct('.imageProduct','.descriptionProduct', catalogProduct[1])
+}   
 
+//alert(catalogProduct[1])
+//let detailedProduct = new DetailedProduct('.imageProduct','.descriptionProduct', catalogProduct[1])
+//console.log(detailedProduct)
+
+if(sessionStorage.getItem('catalogForInfoPage')){
+  const temp = sessionStorage.getItem('catalogForInfoPage')
+  console.log(temp)
+  new DetailedProduct(JSON.parse(temp))
+}
