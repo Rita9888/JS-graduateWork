@@ -129,23 +129,67 @@ header {
   top: 60px;
   left: 870px;
   border: 1px solid #f7f7f7;
-  overflow: scroll;
 }
 
-.container-cart .item .img {
-  max-width: 20%;
+.container-cart .slot {
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 250px;
+}
+
+.container-cart .slot .item {
+  margin-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.container-cart .slot .item .img {
+  max-width: 30%;
+  margin: 0 10px;
   background: url(./image/bjursta-extendable-table__.webp) 100% 100% no-repeat;
 }
 
-.container-cart .item .name {
+.container-cart .slot .item .productInfo {
+  margin: 0 20px;
+}
+
+.container-cart .slot .item .productInfo .name {
   font-size: 12px;
   font-weight: bold;
   color: #b9b5b5;
 }
 
-.container-cart .item .price {
+.container-cart .slot .item .productInfo .price {
   font-size: 12px;
   font-weight: bold;
+}
+
+.container-cart .slot .item .removeProduct {
+  margin-left: 20px;
+}
+
+.container-cart .viewCart {
+  width: 100px;
+  height: 30px;
+  margin: 10px 20px;
+  float: right;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #000;
+  font-size: 14px;
+  padding: 5px 20px;
+  font-family: "Rokkitt";
+  font-weight: bold;
+}
+
+.container-cart .viewCart:hover {
+  background-color: #817e7e;
+  border: 1px solid #817e7e;
+  color: #fff;
 }
 
 .close {

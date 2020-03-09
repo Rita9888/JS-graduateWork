@@ -7,9 +7,10 @@ if(!localStorage.getItem(allUsersKey)){
 
 const currentUserKey = 'currentUser';
 
-const cartKey = 'cartKey';
-if(!localStorage.getItem(cartKey)){
-  const productCart = [];
-  const productCartJson = JSON.stringify(productCart);
-  localStorage.setItem(cartKey,productCartJson);
-}
+/* const commentKey = 'commentKey';
+if(!localStorage.getItem(commentKey)){
+  const commentProduct = [];
+  const commentProductJson = JSON.stringify(commentProduct);
+  localStorage.setItem(commentKey,commentProductJson);
+} */
+

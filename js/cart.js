@@ -10,7 +10,14 @@ class Cart{
         document.getElementById('basket').addEventListener('click', function(){
             cart.containerCart.style.display = 'block';
             let productsCart = cart.getProductCart();
-            let wrapper = document.createElement('slot');
+            let wrapper = document.createElement('div');
+            wrapper.className = 'slot';
+            const view = document.createElement('button');
+            view.className = 'viewCart';
+            view.innerHTML = 'View Cart';
+            view.addEventListener('click', () => {
+                window.location.href = '../html/basket.html';
+            })
 
             for( let i = 0; i < productsCart.length; i++){
                 let item = createOneProduct.getProductItem({
@@ -20,7 +27,11 @@ class Cart{
                 let img = createOneProduct.getProductItem({
                     tagName: 'img',
                     className: 'img',
-                    backgroundImg: `('${productsCart[i].img}')` 
+                    backgroundImg: `${productsCart[i].img}` 
+                });
+                let productInfo = createOneProduct.getProductItem({
+                    tagName: 'div',
+                    className: 'productInfo',
                 });
                 let name = createOneProduct.getProductItem({
                     tagName: 'div',
@@ -32,10 +43,37 @@ class Cart{
                     className: 'price',
                     textName: productsCart[i].price + '$' //Обращение уже к полученному массиву товаров
                 });
-                item.appendChild(name);
+                const remove = createOneProduct.getProductItem({
+                    tagName: 'div',
+                    className: 'removeProduct',
+                });
+                const deleteBtn = createOneProduct.getProductItem({
+                    tagName: 'a',
+                    id: productsCart[i].id,
+                    href: 'javascript:void(0);'
+                });
+                const deleteIcon = createOneProduct.getProductItem({
+                    tagName: 'i',
+                    className: 'fas fa-times',
+
+                });
+                deleteBtn.addEventListener('click', () => {
+
+                    const productLocalStorage = JSON.parse(localStorage.getItem('CardStore'));
+                    localStorage.setItem('CardStore', JSON.stringify(productLocalStorage.filter(p => p !== deleteBtn.id)));
+                    item.remove();
+                  })
+                
+
+                deleteBtn.appendChild(deleteIcon);
+                remove.appendChild(deleteBtn);
+                productInfo.appendChild(name);
+                productInfo.appendChild(price);
                 item.appendChild(img);
-                item.appendChild(price);
+                item.appendChild(productInfo);
+                item.appendChild(remove);
                 wrapper.appendChild(item);
+                
             }
     
             let close = createOneProduct.getProductItem({
@@ -51,6 +89,7 @@ class Cart{
 
             cart.containerCart.appendChild(wrapper);
             cart.containerCart.appendChild(close);
+            cart.containerCart.appendChild(view);
         });
     }
 

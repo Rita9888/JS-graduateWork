@@ -42,11 +42,12 @@ class CartPage{
   nameContainer.innerHTML = name;
 
   const priceContainer = document.createElement('div');
-  priceContainer.className = 'name-product col-xl-2 col-lg-2 col-md-2 col-sm-2';
+  priceContainer.className = 'price-product col-xl-2 col-lg-2 col-md-2 col-sm-2';
   priceContainer.innerHTML = price + '$';
 
   const quantityContainer = document.createElement('div');
   quantityContainer.className = 'quantity-product col-xl-2 col-lg-2 col-md-2 col-sm-2';
+  quantityContainer.innerHTML = 'Qty: ';
   const quantityInput = document.createElement('input');
   quantityInput.type = 'number';
   quantityInput.value = '1';
@@ -55,7 +56,10 @@ class CartPage{
 
   const totalContainer = document.createElement('div');
   totalContainer.className = 'total col-xl-2 col-lg-2 col-md-2 col-sm-2';
-  totalContainer.innerHTML = price + '$';
+  totalContainer.innerHTML = 'Total: ' + price + '$';
+
+  const totalCart = document.getElementById('totalCart');
+  totalCart.innerHTML = 0;
 
   deleteBtn.addEventListener('click', () => {
 
@@ -66,7 +70,11 @@ class CartPage{
 
   quantityInput.addEventListener('keyup', (e) => {
     const count = e.target.value;
-    totalContainer.innerHTML = (count * price) + '$';
+    const total = (count * price);
+    totalContainer.innerHTML = 'Total: ' + total + '$';
+    totalCart.innerHTML =  Array.from(document.getElementsByClassName('total')).reduce((result, element) => parseInt(element.innerHTML.match(/\d+/)) + result, 0)
+   
+    console.log(total)
   })
 
   row.appendChild(deleteContainer);
@@ -75,6 +83,7 @@ class CartPage{
   row.appendChild(priceContainer);
   row.appendChild(quantityContainer);
   row.appendChild(totalContainer);
+
 
   return row; 
  }
@@ -87,6 +96,8 @@ class CartPage{
  create(){
   const rows = this.catalogProduct.map(p => this.createRow(this.getProductById(p)));
   rows.forEach(element => this.containerBasket.appendChild(element));
+  document.getElementById('totalCart').innerHTML = 'Total Cart: ' + Array.from(document.getElementsByClassName('total')).reduce((result, element) => parseInt(element.innerHTML.match(/\d+/)) + result, 0) + '$';
+   
  }
 }
 

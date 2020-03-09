@@ -16,6 +16,8 @@ class AllProducts{
   createProduct(){
     let wrapper = document.createElement('slot');
     let products = cardStore.getProduct();
+    const containerBtn = document.createElement('div');
+    containerBtn.className = 'containerBtn';
     this.catalogCounter.innerHTML = products.length;
     for(let i=0; i<this.catalogProduct.length; i++){
 
@@ -49,8 +51,11 @@ class AllProducts{
         tagName: 'div',
         className: 'price',
         textName: this.catalogProduct[i].price + '$'
-      })
-
+      });
+       let containerBtn = createOneProduct.getProductItem({
+        tagName: 'div',
+        className: 'containerBtn',
+      });
       let btn = createOneProduct.getProductItem({
         tagName: 'button',
         className: 'btn',
@@ -80,12 +85,13 @@ class AllProducts{
         let result = cardStore.putProduct(id);
       }) 
 
-      
+      containerBtn.appendChild(btn);
+      containerBtn.appendChild(btnInfo);
       item.appendChild(img);
       item.appendChild(name);
       item.appendChild(price);
-      item.appendChild(btn);
-      item.appendChild(btnInfo);
+      item.appendChild(containerBtn);
+
       wrapper.appendChild(item);
     }
 

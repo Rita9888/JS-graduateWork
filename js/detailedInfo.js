@@ -105,9 +105,8 @@ class DetailedProduct{
 //alert(catalogProduct[1])
 //let detailedProduct = new DetailedProduct('.imageProduct','.descriptionProduct', catalogProduct[1])
 //console.log(detailedProduct)
+if(!sessionStorage.getItem('catalogForInfoPage'))
+  window.location.href = '../html/catalog.html';
 
-if(sessionStorage.getItem('catalogForInfoPage')){
-  const temp = sessionStorage.getItem('catalogForInfoPage')
-  console.log(temp)
-  new DetailedProduct(JSON.parse(temp))
-}
+const currentProduct = JSON.parse(sessionStorage.getItem('catalogForInfoPage'));
+new DetailedProduct(currentProduct);

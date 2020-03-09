@@ -33,7 +33,10 @@
             </div>
           </div>
         </div>
-        <div class="search col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+        <div id ="search" class="search col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+          <form id='inputSearch'>
+            <input  id="productSearch" type="search" placeholder="Search product" >
+          </form>
           <i class="fas fa-search"></i>
         </div>
         <div id ="basket" class="basket col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
@@ -100,15 +103,15 @@
         <div class="navMenu col-xl-2 col-lg-2 col-md-2 col-sm-2">
         <ul class="shop-menu">Shop by category
           <li id="all" onClick='All()'><i class="fas fa-archway"></i> All</li>
-          <li id="tableFilter" onClick='filter("Table")'><i class="fas fa-archway"></i> Table</li>
-          <li id="chairFilter" onClick='filter("Chair")'><i class="fas fa-chair"></i> Chair</li>
-          <li id="bedFilter" onClick='filter("Bed")'><i class="fas fa-bed"></i> Bed</li>
-          <li id="chestFilter" onClick='filter("Chest")'><i class="fab fa-accusoft"></i> Chest</li>
-          <li id="sofaFilter" onClick='filter("Sofa")'><i class="fas fa-couch"></i> Sofa</li>
+          <li id="tableFilter" onClick = 'filterCategory("Table")'><i class="fas fa-archway"></i> Table</li>
+          <li id="chairFilter" onClick='filterCategory("Chair")'><i class="fas fa-chair"></i> Chair</li>
+          <li id="bedFilter" onClick='filterCategory("Bed")'><i class="fas fa-bed"></i> Bed</li>
+          <li id="chestFilter" onClick='filterCategory("Chest")'><i class="fab fa-accusoft"></i> Chest</li>
+          <li id="sofaFilter" onClick='filterCategory("Sofa")'><i class="fas fa-couch"></i> Sofa</li>
         </ul>
         <div class="inputPrice">
           Price:<br>
-          <input type="input" id='from' value="0"> to <input type="input" id='to' value = "1000">
+          <input type="input" id='from' value="0" onchange="filterPrice()"> to <input type="input" id='to' value = "1000"onchange="filterPrice()">
         </div>
       </div>  
 
@@ -122,15 +125,15 @@
  <!--  <div class="item"></div> -->
 </section>
 
-
+<script src="../js/burger.js"></script>
 <script src="../js/script.js"></script>
 <script src="../js/createOneProduct.js"></script>
 <script src="../js/cardStore.js"></script>
 <script src="../js/detailedInfo.js"></script>
 <script src="../js/catalog.js"></script>
 <script src="../js/filter.js"></script>
+<script src="../js/search.js"></script>
 <script src="../js/cart.js"></script>
-<script src="../js/stockTime.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

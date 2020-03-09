@@ -1,12 +1,14 @@
 
-function filter(category){
-  let from = document.getElementById('from').value;
-  let to = document.getElementById('to').value;
+function filterCategory(category){
+
     let filterProduct = catalogProduct.filter(function(catalogProduct){
-      return catalogProduct.category == category && catalogProduct.price > from && catalogProduct.price < to;
+      return catalogProduct.category == category;
     });
     document.getElementsByClassName('container-product')[0].innerHTML = '';
     let filterProducts = new AllProducts('.container-product', '.container-counter', filterProduct);
+      console.log(filterProduct)
+      return filterProducts;
+
 }
 
 
@@ -23,22 +25,20 @@ function All(){
 
 
 function filterPrice(){
-  
-  let priceFilter = catalogProduct.filter(function(catalogProduct){
-    return catalogProduct.price > from && catalogProduct.price < to
-  });
+  let from = document.getElementById('from').value;
+  let to = document.getElementById('to').value;
+
+  const newArrayProducts = filterCategory(category);
+  console.log(newArrayProducts)
+
+  let priceFilter = newArrayProducts.filter(function(newArrayProducts){
+    return newArrayProducts.price > from && newArrayProducts.price < to;
+  }); 
   console.log(priceFilter)
+
+  document.getElementsByClassName('container-product')[0].innerHTML = '';
+  let filterProducts = new AllProducts('.container-product', '.container-counter', priceFilter);
 }
-filterPrice() 
 
 
 
-/* let resultFilter = [];
-  let result;
-  for(let i=0 ; i<catalogProduct.length; i++){
-    if(catalogProduct[i].price > from && catalogProduct[i].price < to){
-      resultFilter.push(document.getElementsByClassName('item')[i])
-    }
-  }
-  //alert(resultFilter)
-  let filterPriceProducts = new AllProducts('.container-product','.container-counter', resultFilter); */

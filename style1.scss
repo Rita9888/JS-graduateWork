@@ -73,7 +73,7 @@ $greyColorBackground: #f7f7f7;
       color: #000;
       border-radius: 50px;
       font-size: 12px;
-      padding: 3px 20px;
+      padding: 3px 10px;
       font-family: $secondaryFontFamily;
       &:hover{
         background-color: rgb(255, 119, 8);
@@ -171,7 +171,7 @@ $greyColorBackground: #f7f7f7;
       color: #000;
       border-radius: 50px;
       font-size: 15px;
-      padding: 3px 20px;
+      padding: 3px 10px;
       font-family: $secondaryFontFamily;
       margin: 10px 0;
       &:hover{
@@ -203,6 +203,27 @@ $greyColorBackground: #f7f7f7;
     &:hover{
       background-color: #000;
       color: #fff;
+    }
+  }
+  .productComments{
+    margin-top: 50px;
+    .newComment{
+      border: 1px solid grey;
+      padding: 10px;
+      margin-top: 30px;
+    }
+    .deleteComment{
+      float: right;
+      border-radius: 50px;
+      background-color: rgba(199, 191, 191, 0.404);
+      border: none;
+      padding: 5px 15px;
+      font-size: 15px;
+      &:hover{
+      background-color: #000;
+      color: #fff;
+    }
+
     }
   }
 }
@@ -327,6 +348,7 @@ $greyColorBackground: #f7f7f7;
 }
 
 ///////////Blog//////////////////////
+.newses{
 .item{
   margin-top: 50px;
   .news{
@@ -354,7 +376,7 @@ $greyColorBackground: #f7f7f7;
         border: 1px solid #fff;
       }
       svg{
-        font-size: 32px;
+        font-size: 52px;
         color:rgba(255, 255, 255, 0);
         margin: 10px;
         border: 1px solid rgba(255, 255, 255, 0);
@@ -412,6 +434,7 @@ $greyColorBackground: #f7f7f7;
       }
     }
   }
+}
 }
 
 ////////////Registration//////////////////
@@ -496,6 +519,71 @@ $greyColorBackground: #f7f7f7;
       }
     }
   }
+}
+
+//////////////////Cart Page///////////////////
+.basket{
+  .basket-container{
+    width: 100%;
+    margin-top: 50px;
+    .delete-product{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      svg{
+        color: #000;
+      }
+    }
+  }
+  .image-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .name-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .price-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  .quantity-product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 16px;  
+    input{
+      width: 50px;
+      text-align: center;
+    }
+  }
+  .total{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #000;
+    font-size: 16px;  
+    font-weight: bold;
+  }
+}
+
+.totalCart{
+  display:flex;
+  justify-content: flex-end;
+  color: #000;
+  font-size: 18px;  
+  font-weight: bold;
+  border-top: 1px solid grey;
 }
 
 //////////media//////////////

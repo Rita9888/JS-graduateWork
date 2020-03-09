@@ -1,5 +1,4 @@
 document.getElementById('loginBtn').addEventListener('click', () => {
-  debugger
   const email = document.getElementById('email').value;
   const password = document.getElementById('password').value;
   const allUsers = JSON.parse(localStorage.getItem(allUsersKey));

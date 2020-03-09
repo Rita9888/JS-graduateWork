@@ -121,21 +121,55 @@ header{
   top: 60px;
   left: 870px;
   border: 1px solid $greyColorBackground;
-  overflow: scroll;
-  .item{
-    .img{
-      max-width: 20%;
-      background: url(./image/bjursta-extendable-table__.webp)100% 100% no-repeat;
-      } 
-      .name{
-        font-size: 12px;
-        font-weight: bold;
-        color: rgb(185, 181, 181);
-      }
-      .price{
-        font-size: 12px;
-        font-weight: bold;
-      }
+  
+  .slot{
+    overflow: scroll;
+    overflow-x: hidden;
+    height: 250px;
+    .item{
+      margin-top: 20px;
+      display: flex;
+      justify-content: space-around;
+      .img{
+        max-width: 30%;
+        margin: 0 10px;
+        background: url(./image/bjursta-extendable-table__.webp)100% 100% no-repeat;
+        } 
+        .productInfo{
+          margin: 0 20px;
+          .name{
+            font-size: 12px;
+            font-weight: bold;
+            color: rgb(185, 181, 181);
+          }
+          .price{
+            font-size: 12px;
+            font-weight: bold;
+          }
+        }
+        .removeProduct{
+          margin-left: 20px;
+        }
+    }
+  }
+  .viewCart{
+    width: 100px;
+    height: 30px;
+    margin: 10px 20px;
+    float: right;
+    background-color: #000;
+    color: #fff;
+    border-radius: 50px;
+    border: 1px solid #000;
+    font-size: 14px;
+    padding: 5px 20px;
+    font-family: $secondaryFontFamily;
+    font-weight: bold;
+    &:hover{
+      background-color: rgb(129, 126, 126);
+      border: 1px solid rgb(129, 126, 126);
+      color: #fff;
+    }
   }
 }
 
