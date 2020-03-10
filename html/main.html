@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="../style.css">
   <link href="https://fonts.googleapis.com/css?family=Abril+Fatface&display=swap&subset=latin-ext" rel="stylesheet">
+  <link rel="stylesheet" href="../animate.css">
   <title>MOBILI</title>
 </head>
 <body>
@@ -26,13 +27,15 @@
           </div>
   
           <div class="account col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-            <div class="dropdown">
+            <div id ="dropdown" class="dropdown">
               <button class="dropbtn">My Account<i class="fas fa-angle-down"></i></button>
               <div class="dropdown-content">
                 <a href="./logIn.html">Log In</a>
                 <a href="./registrPage.html">Regisration</a>
               </div>
             </div>
+            <div id="userAccount" style="display: none">
+              <i class="fas fa-user"></i></div>
           </div>
           <div id ="search" class="search col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
             <form id='inputSearch'>
@@ -70,13 +73,16 @@
           <div class="null col-3"></div>
   
           <div class="account col-2">
-            <div class="dropdown">
+            <div id ="dropdown" class="dropdown">
               <button class="dropbtn"><i class="far fa-user"></i></button>
               <div class="dropdown-content">
                 <a href="./logIn.html">Log In</a>
                 <a href="./registrPage.html">Regisration</a>
               </div>
             </div>
+            <div id="userAccount" style="display: none">
+              <i class="fas fa-user"></i></div>
+          </div>
           </div>
           <div id ="search" class="search col-2">
             <i class="fas fa-search"></i>
@@ -93,14 +99,14 @@
     
 
     <div class="slider">
-      <div class="slider__wrapper">
+      <div class="slider__wrapper ">
         <div class="slider__item">
           <div class="content">
-            <h2>Soft Chair<br> Collection</h2>
+            <h2 class="wow bounceInDown" data-wow-duration='2s'>Soft Chair<br> Collection</h2>
             <p>There are many variation of passage of Lorem ipsum available,<br> but the majority have suffered alteration</p>
             <a href="#">Explore all</a>
           </div>
-          <div><img src="../image/kreslo.png"></image></div>
+          <div><img src="../image/kreslo.png" class="wow bounceInUp" data-wow-duration='2s'></image></div>
         </div>
         <div class="slider__item">
             <div class="content">
@@ -129,7 +135,7 @@
             <h3>Free Shipping</h3>
             <p>Nullam Lacinia Faucibuseuismod Lorem Donec Maximus Placerat Tempor.</p>
           </div>
-          <div class="text col-xl-4 col-lg-4 col-md-4 col-sm-4">
+          <div class="text col-xl-4 col-lg-4 col-md-4 col-sm-4 ">
             <h3>Customer Support</h3>
             <p>Nullam Lacinia Faucibuseuismod Lorem Donec Maximus Placerat Tempor.</p>
           </div>
@@ -159,12 +165,12 @@
           <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
             <div class="square3">
               <img src="../image/pufic.png">
-              <a  href="#">EXPLORE ALL</a>
+              <a  class="wow pulse" data-wow-iteration="50" data-wow-delay="1s" href="#">EXPLORE ALL</a>
             </div>
             <div class="square4">
               <p>Table Lamp</p>
               <img src="../image/lampa.png">
-              <a  href="#">EXPLORE ALL</a>
+              <a  class="wow pulse" data-wow-iteration="50" data-wow-delay="1s"  href="#">EXPLORE ALL</a>
             </div>
           </div>
           <div class="item col-xl-4 col-lg-4 col-md-4 col-sm-4">
@@ -326,10 +332,16 @@
 <script src="../js/cardStore.js"></script>
 <script src="../js/catalog.js"></script>
 <script src="../js/cart.js"></script>
+<script src="../js/localStorage.js"></script>
+<script src="../js/currentUser.js"></script>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 <script src="../fontawesome/js/all.js"></script>
+<script src="../js/wow.min.js"></script>
+<script>
+    new WOW().init();
+</script>
 </body>
 </html>

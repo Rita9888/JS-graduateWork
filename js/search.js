@@ -10,20 +10,30 @@ document.addEventListener('click', function(event) {
   }
 });
 
-document.getElementById('productSearch').addEventListener('change', function(e) {
-  e.preventDefault()
+const searchKey = 'searchKey';
+
+ document.getElementById('productSearch').addEventListener('keydown', function(e) {
+  e.preventDefault();
+  e.stopPropagation();
+  if(e.key !== 'Enter')
+  return;
   const input = document.getElementById('productSearch').value;
-  console.log(input)
-  if(input == 'Sofa' || input == 'sofa'){
-    (window.location.href = '../html/catalog.html').addEventListener('load',function() {
-      alert('Страница загружена');
-      filterCategory('Sofa');
-    }) 
-  }else if(input == 'Chair' || input == 'chair'){
-    //window.location.href = '../html/catalog.html';
-    filterCategory('Chair');
-  }else{
-    alert('Nothing found');
-  } 
-})
+  
+  sessionStorage.setItem(searchKey, JSON.stringify(input));
+  window.location.href = '../html/catalog.html';
+ });
+
+    /* console.log(input)
+    if(input == 'Sofa' || input == 'sofa'){
+      (window.location.href = '../html/catalog.html')
+        alert('Страница загружена');
+        filterCategory('Sofa');
+      
+    }else if(input == 'Chair' || input == 'chair'){
+      //window.location.href = '../html/catalog.html';
+      filterCategory('Chair');
+    }else{
+      alert('Nothing found');
+    }  */
+
 

@@ -8,7 +8,7 @@ document.getElementById('loginBtn').addEventListener('click', () => {
     const [currentUser] = user;
     localStorage.setItem(currentUserKey, JSON.stringify(currentUser));
     alert("hello")
-    window.location.href = '../main.html';
+    window.location.href = '../html/main.html';
   }else{alert('bye')}
   
 })

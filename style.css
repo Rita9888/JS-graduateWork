@@ -269,6 +269,14 @@ header {
   background-color: #f1f1f1;
 }
 
+.account #userAccount svg {
+  font-size: 20px;
+}
+
+.account #userAccount p {
+  margin: 0 10px;
+}
+
 .slider {
   position: relative;
   overflow: hidden;
@@ -465,7 +473,7 @@ header {
 }
 
 .container4 .item .square1 img {
-  max-width: 100%;
+  max-width: 85%;
 }
 
 .container4 .item .square1 span {
@@ -523,8 +531,8 @@ header {
 }
 
 .container4 .item .square3 img {
-  max-width: 100%;
-  max-height: 80%;
+  max-width: 80%;
+  max-height: 70%;
 }
 
 .container4 .item .square3 a {
@@ -567,8 +575,9 @@ header {
 }
 
 .container4 .item .square4 img {
-  max-width: 100%;
-  max-height: 70%;
+  max-width: 80%;
+  max-height: 60%;
+  margin-bottom: 10px;
 }
 
 .container4 .item .square4 a {
@@ -688,6 +697,11 @@ header {
   font-size: 30px;
   color: grey;
   margin: 10px 0;
+}
+
+.container5 .item .advantages svg:hover {
+  font-size: 40px;
+  margin: 5px 0;
 }
 
 .container5 .item .advantages h4 {

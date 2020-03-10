@@ -11,7 +11,7 @@ btn.addEventListener('click',function (){
           alert('Welcome!');
         }, 1 * 1000); 
         setTimeout(function(){
-          window.location.href = '../main.html';
+          window.location.href = '../html/main.html';
         }, 3 * 1000); 
 });
 

@@ -25,13 +25,15 @@
         </div>
 
         <div class="account col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2">
-          <div class="dropdown">
+          <div id ="dropdown" class="dropdown">
             <button class="dropbtn">My Account<i class="fas fa-angle-down"></i></button>
             <div class="dropdown-content">
               <a href="./logIn.html">Log In</a>
               <a href="./registrPage.html">Regisration</a>
             </div>
           </div>
+          <div id="userAccount" style="display: none">
+            <i class="fas fa-user"></i></div>
         </div>
         <div id ="search" class="search col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
           <form id='inputSearch'>
@@ -69,16 +71,20 @@
         <div class="null col-3"></div>
 
         <div class="account col-2">
-          <div class="dropdown">
+          <div id ="dropdown" class="dropdown">
             <button class="dropbtn"><i class="far fa-user"></i></button>
             <div class="dropdown-content">
               <a href="./logIn.html">Log In</a>
               <a href="./registrPage.html">Regisration</a>
             </div>
           </div>
+          <div id="userAccount" style="display: none">
+            <i class="fas fa-user"></i></div>
         </div>
-        <div class="search col-2">
+        </div>
+        <div id ="search" class="search col-2">
           <i class="fas fa-search"></i>
+            
         </div>
         <div id ="basket" class="basket col-2">
           <span class="container-counter">0</span>
@@ -102,7 +108,7 @@
       <div class="row">
         <div class="navMenu col-xl-2 col-lg-2 col-md-2 col-sm-2">
         <ul class="shop-menu">Shop by category
-          <li id="all" onClick='All()'><i class="fas fa-archway"></i> All</li>
+          <li id="all" onClick='filterCategory("All")'><i class="fas fa-archway"></i> All</li>
           <li id="tableFilter" onClick = 'filterCategory("Table")'><i class="fas fa-archway"></i> Table</li>
           <li id="chairFilter" onClick='filterCategory("Chair")'><i class="fas fa-chair"></i> Chair</li>
           <li id="bedFilter" onClick='filterCategory("Bed")'><i class="fas fa-bed"></i> Bed</li>
@@ -111,7 +117,7 @@
         </ul>
         <div class="inputPrice">
           Price:<br>
-          <input type="input" id='from' value="0" onchange="filterPrice()"> to <input type="input" id='to' value = "1000"onchange="filterPrice()">
+          <input type="input" id='from' value="0" onchange="filter()"> to <input type="input" id='to' value = "1000"onchange="filter()">
         </div>
       </div>  
 
@@ -131,10 +137,11 @@
 <script src="../js/cardStore.js"></script>
 <script src="../js/detailedInfo.js"></script>
 <script src="../js/catalog.js"></script>
-<script src="../js/filter.js"></script>
 <script src="../js/search.js"></script>
+<script src="../js/filter.js"></script>
 <script src="../js/cart.js"></script>
-
+<script src="../js/localStorage.js"></script>
+<script src="../js/currentUser.js"></script>
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

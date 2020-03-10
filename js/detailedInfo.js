@@ -106,7 +106,7 @@ class DetailedProduct{
 //let detailedProduct = new DetailedProduct('.imageProduct','.descriptionProduct', catalogProduct[1])
 //console.log(detailedProduct)
 if(!sessionStorage.getItem('catalogForInfoPage'))
-  window.location.href = '../html/catalog.html';
+  //window.location.href = '../html/catalog.html';
 
 const currentProduct = JSON.parse(sessionStorage.getItem('catalogForInfoPage'));
 new DetailedProduct(currentProduct);

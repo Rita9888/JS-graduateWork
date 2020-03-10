@@ -240,6 +240,17 @@ header{
     
   }
 
+  .account{
+    #userAccount{
+      svg{
+        font-size: 20px;
+      }
+      p{
+        margin: 0 10px;
+      }
+    }
+  }
+
 
 .slider {
   position: relative;
@@ -400,7 +411,7 @@ header{
         font-weight: bold;
       }
       img{
-        max-width: 100%;
+        max-width: 85%;
       }
       span{
         color: red;
@@ -436,8 +447,8 @@ header{
       justify-content: center;
       align-items: center;
       img{
-        max-width: 100%;
-        max-height: 80%;
+        max-width: 80%;
+        max-height: 70%;
       }
       a{
         width: 100px;
@@ -466,8 +477,9 @@ header{
       justify-content: center;
       align-items: center;
       img{
-        max-width: 100%;
-        max-height: 70%;
+        max-width: 80%;
+        max-height: 60%;
+        margin-bottom: 10px;
       }
 
       a{
@@ -552,6 +564,10 @@ header{
         font-size: 30px;
         color: grey;
         margin: 10px 0;
+        &:hover{
+          font-size: 40px;
+          margin: 5px 0;
+        }
       }
       h4{
         font-size: 16px;

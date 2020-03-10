@@ -1,43 +1,25 @@
+let currentCategory = 'All';
+function filter(){
+  const from = document.getElementById('from').value;
+  const to = document.getElementById('to').value;
+  let filterProducts = catalogProduct.filter((p) => p.price > from && p.price < to);
+  document.getElementsByClassName('container-product')[0].innerHTML = '';
+  if(currentCategory !== 'All'){
+    filterProducts = filterProducts.filter(p => p.category.toUpperCase() === currentCategory.toUpperCase());
+  }
+  new AllProducts('.container-product', '.container-counter', filterProducts);
+}
 
 function filterCategory(category){
-
-    let filterProduct = catalogProduct.filter(function(catalogProduct){
-      return catalogProduct.category == category;
-    });
-    document.getElementsByClassName('container-product')[0].innerHTML = '';
-    let filterProducts = new AllProducts('.container-product', '.container-counter', filterProduct);
-      console.log(filterProduct)
-      return filterProducts;
-
+  currentCategory = category;
+  filter();
 }
 
 
-function All(){
-  let from = document.getElementById('from').value;
-  let to = document.getElementById('to').value;
-  let priceFilter = catalogProduct.filter(function(catalogProduct){
-    return catalogProduct.price > from && catalogProduct.price < to
-  });
-    document.getElementsByClassName('container-product')[0].innerHTML = '';
-    let allProducts = new AllProducts('.container-product', '.container-counter', priceFilter);
-}
-
-
-
-function filterPrice(){
-  let from = document.getElementById('from').value;
-  let to = document.getElementById('to').value;
-
-  const newArrayProducts = filterCategory(category);
-  console.log(newArrayProducts)
-
-  let priceFilter = newArrayProducts.filter(function(newArrayProducts){
-    return newArrayProducts.price > from && newArrayProducts.price < to;
-  }); 
-  console.log(priceFilter)
-
-  document.getElementsByClassName('container-product')[0].innerHTML = '';
-  let filterProducts = new AllProducts('.container-product', '.container-counter', priceFilter);
+if(sessionStorage.getItem(searchKey)){
+  const searchProduct = JSON.parse(sessionStorage.getItem(searchKey));
+  filterCategory(searchProduct);
+  sessionStorage.clear(searchKey);
 }
 
 
