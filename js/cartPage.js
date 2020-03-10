@@ -23,7 +23,7 @@ class CartPage{
   row.className = 'row';
 
   const deleteContainer = document.createElement('div');
-  deleteContainer.className = 'delete-product col-xl-1 col-lg-1 col-md-1 col-sm-1';
+  deleteContainer.className = 'delete-product col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1';
   const deleteBtn = document.createElement('a');
   deleteBtn.href = 'javascript:void(0);';
   const deleteIcon = document.createElement('i');
@@ -32,21 +32,21 @@ class CartPage{
   deleteContainer.appendChild(deleteBtn);
 
   const imageContainer = document.createElement('div');
-  imageContainer.className = 'image-product col-xl-2 col-lg-2 col-md-2 col-sm-2';
+  imageContainer.className = 'image-product col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2';
   const image = document.createElement('img');
   image.src = img;
   imageContainer.appendChild(image);
 
   const nameContainer = document.createElement('div');
-  nameContainer.className = 'name-product col-xl-3 col-lg-3 col-md-3 col-sm-3';
+  nameContainer.className = 'name-product col-xl-3 col-lg-3 col-md-3 col-sm-3 col-3';
   nameContainer.innerHTML = name;
 
   const priceContainer = document.createElement('div');
-  priceContainer.className = 'price-product col-xl-2 col-lg-2 col-md-2 col-sm-2';
+  priceContainer.className = 'price-product col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2';
   priceContainer.innerHTML = price + '$';
 
   const quantityContainer = document.createElement('div');
-  quantityContainer.className = 'quantity-product col-xl-2 col-lg-2 col-md-2 col-sm-2';
+  quantityContainer.className = 'quantity-product col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2';
   quantityContainer.innerHTML = 'Qty: ';
   const quantityInput = document.createElement('input');
   quantityInput.type = 'number';
@@ -55,7 +55,7 @@ class CartPage{
   quantityContainer.appendChild(quantityInput);
 
   const totalContainer = document.createElement('div');
-  totalContainer.className = 'total col-xl-2 col-lg-2 col-md-2 col-sm-2';
+  totalContainer.className = 'total col-xl-2 col-lg-2 col-md-2 col-sm-2 col-2';
   totalContainer.innerHTML = 'Total: ' + price + '$';
 
   const totalCart = document.getElementById('totalCart');

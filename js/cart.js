@@ -91,6 +91,12 @@ class Cart{
             cart.containerCart.appendChild(close);
             cart.containerCart.appendChild(view);
         });
+
+        /////////////Mobile//////////////////////////
+
+        document.getElementById('basketMobile').addEventListener('click', function(){
+            window.location.href = '../html/basket.html';
+        });
     }
 
     getProductCart(){

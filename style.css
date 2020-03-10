@@ -911,7 +911,7 @@ footer .pay .appStore {
   }
   .trigger i {
     display: block;
-    width: 42px;
+    width: 38px;
     height: 6px;
     margin: 4px auto;
     background: #222;
@@ -921,9 +921,9 @@ footer .pay .appStore {
     background: #fff;
     height: 100vh;
     width: 155px;
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: -88px;
+    left: 0;
     z-index: 5;
   }
   .nav-menu li {
@@ -963,7 +963,7 @@ footer .pay .appStore {
     font-size: 23px;
   }
   .container4 .item .square1 p {
-    margin-bottom: 68px;
+    margin-bottom: 0;
     padding: 10px;
     font-size: 20px;
   }
@@ -1098,14 +1098,27 @@ footer .pay .appStore {
   .account .dropbtn svg {
     font-size: 22px;
   }
+  .account #userAccountMobile svg {
+    font-size: 22px;
+  }
+  .account #userAccountMobile p {
+    margin: 0 10px;
+  }
   .search svg {
     font-size: 22px;
   }
   .search {
     border: none;
   }
+  .search form {
+    z-index: 5;
+    position: absolute;
+    top: 40px;
+    right: 0px;
+  }
   .basket img {
-    margin-right: 22px;
+    margin-right: 0px;
+    max-width: 90%;
   }
   .trigger {
     margin-left: 2px;
@@ -1263,6 +1276,35 @@ footer .pay .appStore {
   }
   .slider-control_right::before {
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E");
+  }
+  footer .pay .appStore {
+    max-width: 40%;
+  }
+}
+
+@media (max-width: 320px) {
+  .trigger i {
+    width: 30px;
+  }
+  .basket img {
+    max-width: 100%;
+  }
+  .account #userAccountMobile svg {
+    font-size: 20px;
+  }
+  .search svg {
+    font-size: 20px;
+  }
+  .newses .item .news .upColor {
+    height: 268px;
+    margin-bottom: -276px;
+    top: -268px;
+  }
+  footer .pay .appStore {
+    max-width: 50%;
+  }
+  footer .pay img {
+    max-width: 65%;
   }
 }
 /*# sourceMappingURL=style.css.map */

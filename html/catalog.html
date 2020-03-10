@@ -71,23 +71,23 @@
         <div class="null col-3"></div>
 
         <div class="account col-2">
-          <div id ="dropdown" class="dropdown">
+          <div id ="dropdownMobile" class="dropdown">
             <button class="dropbtn"><i class="far fa-user"></i></button>
             <div class="dropdown-content">
               <a href="./logIn.html">Log In</a>
               <a href="./registrPage.html">Regisration</a>
             </div>
           </div>
-          <div id="userAccount" style="display: none">
+          <div id="userAccountMobile" style="display: none">
             <i class="fas fa-user"></i></div>
         </div>
-        </div>
-        <div id ="search" class="search col-2">
+        <div id ="searchMobile" class="search col-xl-1 col-lg-1 col-md-1 col-sm-1 col-1">
+          <form id='inputSearchMobile'>
+            <input  id="productSearchMobile" type="search" placeholder="Search product" >
+          </form>
           <i class="fas fa-search"></i>
-            
         </div>
-        <div id ="basket" class="basket col-2">
-          <span class="container-counter">0</span>
+        <div id ="basketMobile" class="basket col-2">
           <img src="../image/9240.png">
         </div>
       </div>
@@ -106,8 +106,8 @@
   <section class="shop">
     <div class="container">
       <div class="row">
-        <div class="navMenu col-xl-2 col-lg-2 col-md-2 col-sm-2">
-        <ul class="shop-menu">Shop by category
+        <div class="navMenu col-xl-2 col-lg-2 col-md-2 col-sm-2">Shop by category <i class="fas fa-angle-down"></i>
+        <ul class="shop-menu">
           <li id="all" onClick='filterCategory("All")'><i class="fas fa-archway"></i> All</li>
           <li id="tableFilter" onClick = 'filterCategory("Table")'><i class="fas fa-archway"></i> Table</li>
           <li id="chairFilter" onClick='filterCategory("Chair")'><i class="fas fa-chair"></i> Chair</li>
@@ -125,6 +125,7 @@
     </div>
   </div>
 </section>
+
 
 
 <section class="container-cart" >

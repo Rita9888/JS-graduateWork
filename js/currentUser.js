@@ -9,3 +9,14 @@ if(curUser != undefined){
   user.innerHTML = curUser.firsname;
   userContainer.appendChild(user);
 }
+
+//////////////Mobile/////////////////////
+if(curUser != undefined){
+  document.getElementById('dropdownMobile').style.display = 'none';
+  const userContainer = document.getElementById('userAccountMobile');;
+  userContainer.style.display = 'flex';
+
+  const user = document.createElement('p');
+  user.innerHTML = curUser.firsname;
+  userContainer.appendChild(user);
+}
